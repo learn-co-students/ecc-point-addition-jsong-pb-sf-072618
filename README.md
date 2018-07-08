@@ -11,9 +11,9 @@ We will come back to these two cases later.
 
 What's interesting is that we can define something called *point addition* using this fact. Like with Field Addition, we define point addition ourselves. In our case, point addition is defined this way:
 
-For any two points P~1~=(x~1~,y~1~) and P~2~=(x~2~,y~2~), we get P~1~+P~2~ by:
+For any two points \\(P_1 = (x_1, y_1)\\) and \\(P_2 = (x_2, y_2)\\), we get \\(P_1 + P_2\\) by:
 
-* Find the point intersects the elliptic curve a third time by drawing a line through P~1~ and P~2~
+* Finding the point intersects the elliptic curve a third time by drawing a line through \\(P_1\\) and \\(P_2\\)
 * Reflect the resulting point over the x-axis
 
 As you can see, point addition is not easily predictable. We can calculate point addition easily enough with a formula, but intuitively, the result of point addition can be almost anywhere given two points on the curve. That is, point addition is non-linear.
