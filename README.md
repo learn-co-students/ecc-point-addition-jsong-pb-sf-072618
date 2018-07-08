@@ -49,8 +49,6 @@ Associativity means that (P+Q) + R=P + (Q+R). This isn't obvious and is the reas
 
 
 ```python
-# Exercise 6.1
-
 x1, y1 = (2,5)
 x2, y2 = (-1,-1)
 # formula in python:
@@ -65,15 +63,13 @@ x2, y2 = (-1,-1)
 
 
 ```python
-# Exercise 7.1
-
 a, b = 5, 7
 x1, y1 = -1, -1
 
 # formula in python
 # s = (3*x1**2+a)/(2*y1)
 # x3 = s**2 - 2*x1
-# y3 = s*(x1-x3) - y1y3 = s*(x1-x3) - y1
+# y3 = s*(x1-x3) - y1
 ```
 
 ### Test Driven Exercise
@@ -94,22 +90,6 @@ class Point(Point):
 
         # Case 1: self.x == other.x, self.y != other.y
         # Result is point at infinity
-        # Remember to return an instance of this class:
-        # self.__class__(x, y, a, b)
-
-        # Case 2: self.x != other.x
-        # Formula (x3,y3)==(x1,y1)+(x2,y2)
-        # s=(y2-y1)/(x2-x1)
-        # x3=s**2-x1-x2
-        # y3=s*(x1-x3)-y1
-        # Remember to return an instance of this class:
-        # self.__class__(x, y, a, b)
-
-        # Case 3: self.x == other.x, self.y == other.y
-        # Formula (x3,y3)=(x1,y1)+(x1,y1)
-        # s=(3*x1**2+a)/(2*y1)
-        # x3=s**2-2*x1
-        # y3=s*(x1-x3)-y1
         # Remember to return an instance of this class:
         # self.__class__(x, y, a, b)
         pass
