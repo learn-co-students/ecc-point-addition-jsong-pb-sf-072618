@@ -1,6 +1,7 @@
+
 # Point Addition
 
-The main reason that Elliptic Curves are useful is because of something called Point Addition.
+The main reason that Elliptic Curves are useful is because of something called Point Addition. 
 
 It turns out that for every elliptic curve, a line will intersect at either 1 or 3 points.
 
@@ -42,10 +43,10 @@ Commutativity means that P+Q=Q+P. This is obvious since the line going through P
 
 Associativity means that (P+Q) + R=P + (Q+R). This isn't obvious and is the reason for flipping over the x-axis.
 
-
-### Exercise
+### Try it
 
 #### For the curve \\(y^2 = x^3 + 5x + 7\\), what is \\((2,5) + (-1,-1)\\)?
+
 
 ```python
 # Exercise 6.1
@@ -58,9 +59,10 @@ x2, y2 = (-1,-1)
 # y3 = s*(x1-x3)-y1
 ```
 
-### Exercise
+### Try it
 
 #### For the curve \\(y^2 = x^3 + 5x + 7\\), what is \\((-1,1) + (-1,1)\\)?
+
 
 ```python
 # Exercise 7.1
@@ -74,12 +76,15 @@ x1, y1 = -1, -1
 # y3 = s*(x1-x3) - y1y3 = s*(x1-x3) - y1
 ```
 
-### Add the `__add__` method to your library:
+### Test Driven Exercise
+
+#### Add the `__add__` method to your library:
+
 
 ```python
 from ecc import Point
 
-class Point:
+class Point(Point):
 
     def __add__(self, other):
         if self.a != other.a or self.b != other.b:
@@ -107,4 +112,5 @@ class Point:
         # y3=s*(x1-x3)-y1
         # Remember to return an instance of this class:
         # self.__class__(x, y, a, b)
+        pass
 ```
