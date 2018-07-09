@@ -74,13 +74,27 @@ x1, y1 = -1, -1
 
 ### Test Driven Exercise
 
-#### Add the `__add__` method to your library:
+#### Make an update to the `__init__` method to handle the point at infinity and then add the `__add__` method to your library.
 
 
 ```python
 from ecc import Point
 
 class Point(Point):
+    
+    def __init__(self, x, y, a, b):
+        self.a = a
+        self.b = b
+        self.x = x
+        self.y = y
+        # x being None and y being None represents the point at infinity
+        # Check for that here since the equation below won't make sense
+        # with None values for both.
+        # make sure that the elliptic curve equation is satisfied
+        # y**2 == x**3 + a*x + b
+        if self.y**2 != self.x**3 + a*x + b:
+        # if not, throw a RuntimeError
+            raise RuntimeError('({}, {}) is not on the curve'.format(self.x, self.y))
 
     def __add__(self, other):
         if self.a != other.a or self.b != other.b:

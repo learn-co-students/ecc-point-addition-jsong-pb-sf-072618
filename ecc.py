@@ -114,8 +114,6 @@ class Point:
         # x being None and y being None represents the point at infinity
         # Check for that here since the equation below won't make sense
         # with None values for both.
-        if self.x is None and self.y is None:
-            return
         # make sure that the elliptic curve equation is satisfied
         # y**2 == x**3 + a*x + b
         if self.y**2 != self.x**3 + a*x + b:
